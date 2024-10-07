@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig>
+   <AppModuleConfigBag>
+      <AppModuleConfig name="AttachAMLocal">
+         <DeployPlatform>LOCAL</DeployPlatform>
+         <JDBCName>4iDEV</JDBCName>
+         <jbo.project>Attachment</jbo.project>
+         <AppModuleJndiName>xxattach.oracle.apps.per.addatt.server.AttachAM</AppModuleJndiName>
+         <java.naming.factory.initial>oracle.jbo.common.JboInitialContextFactory</java.naming.factory.initial>
+         <ApplicationName>xxattach.oracle.apps.per.addatt.server.AttachAM</ApplicationName>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <ConnectionDefinition name="4iDEV">
+      <ENTRY name="JDBC_PORT" value="1523"/>
+      <ENTRY name="ConnectionType" value="JDBC"/>
+      <ENTRY name="HOSTNAME" value="4i-dev121.4iapps.local"/>
+      <ENTRY name="user" value="apps"/>
+      <ENTRY name="ConnectionName" value="4iDEV"/>
+      <ENTRY name="SID" value="R1213DV"/>
+      <ENTRY name="JdbcDriver" value="oracle.jdbc.OracleDriver"/>
+      <ENTRY name="password">
+         <![CDATA[{904}05952ADE03B42556AAA361AEC0387AFAE0]]>
+      </ENTRY>
+      <ENTRY name="ORACLE_JDBC_TYPE" value="thin"/>
+      <ENTRY name="DeployPassword" value="true"/>
+   </ConnectionDefinition>
+</BC4JConfig>
