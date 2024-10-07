@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_1312" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="region1" amDefName="xxattach.oracle.apps.per.addatt.server.AttachAM" controllerClass="xxattach.oracle.apps.per.addatt.webui.AttachCO" windowTitle="Attachment Page" title="Attachment">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:contents>
+            <oa:messageComponentLayout id="MainRN">
+               <ui:contents>
+                  <oa:messageFileUpload id="Browse" prompt="Browse" tipType="none" vAlign="middle"/>
+                  <oa:messageLayout id="Button">
+                     <ui:contents>
+                        <oa:spacer id="Spacer" height="15"/>
+                     </ui:contents>
+                  </oa:messageLayout>
+               </ui:contents>
+            </oa:messageComponentLayout>
+            <oa:spacer id="Spacer1" height="20"/>
+            <oa:rowLayout id="region3" hAlign="center" vAlign="top" width="100%">
+               <ui:contents>
+                  <oa:cellFormat id="region4" hAlign="left" vAlign="top" width="20%"/>
+                  <oa:cellFormat id="region41" hAlign="left" vAlign="top" width="60%">
+                     <ui:contents>
+                        <oa:table id="AttachVO" width="100%">
+                           <ui:contents>
+                              <oa:messageCheckBox id="Select" checkedValue="Y" unCheckedValue="N" viewName="AttachVO" viewAttr="DeleteFlag" defaultValue="N"/>
+                              <oa:messageStyledText id="SNo" prompt="S.No" viewName="AttachVO" viewAttr="Sno"/>
+                              <oa:messageStyledText id="InvoiceNum" dataType="VARCHAR2" prompt="Transaction Number" viewName="AttachVO" viewAttr="TransactionNum"/>
+                              <oa:messageStyledText id="Category" dataType="VARCHAR2" prompt="Category" viewName="AttachVO" viewAttr="Category" maximumLength="50"/>
+                              <oa:messageStyledText id="Filename" dataType="VARCHAR2" prompt="File name" viewName="AttachVO" viewAttr="Filename" maximumLength="240">
+                                 <ui:primaryClientAction>
+                                    <ui:fireAction event="download"/>
+                                 </ui:primaryClientAction>
+                              </oa:messageStyledText>
+                              <oa:messageStyledText id="FilePath" dataType="VARCHAR2" prompt="Path" viewName="AttachVO" viewAttr="FilePath" maximumLength="240"/>
+                              <oa:messageTextInput id="FileDesc" dataType="VARCHAR2" prompt="Description" viewName="AttachVO" viewAttr="FileDesc" maximumLength="50"/>
+                           </ui:contents>
+                           <ui:tableActions>
+                              <oa:flowLayout id="region2">
+                                 <ui:contents>
+                                    <oa:button id="Save" text="Save" prompt="Save" rendered="true">
+                                       <ui:primaryClientAction>
+                                          <ui:firePartialAction event="save"/>
+                                       </ui:primaryClientAction>
+                                    </oa:button>
+                                    <oa:button id="Delete" text="Delete" prompt="Delete">
+                                       <ui:primaryClientAction>
+                                          <ui:firePartialAction event="delete"/>
+                                       </ui:primaryClientAction>
+                                    </oa:button>
+                                 </ui:contents>
+                              </oa:flowLayout>
+                           </ui:tableActions>
+                        </oa:table>
+                     </ui:contents>
+                  </oa:cellFormat>
+                  <oa:cellFormat id="region42" hAlign="left" vAlign="top" width="20%"/>
+               </ui:contents>
+            </oa:rowLayout>
+            <oa:pageButtonBar id="region454">
+               <ui:contents>
+                  <oa:submitButton id="Upload" text="Upload" prompt="Upload" hAlign="center"/>
+               </ui:contents>
+            </oa:pageButtonBar>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>
